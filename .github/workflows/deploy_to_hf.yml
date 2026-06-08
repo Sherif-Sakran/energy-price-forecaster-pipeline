@@ -1,0 +1,26 @@
+name: Sync to Hugging Face Space
+
+on:
+  push:
+    branches: [main] # Triggers the workflow when you push to the main branch
+  workflow_dispatch: # Allows you to trigger the run manually from the GitHub UI
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetches all history for all branches and tags
+
+      - name: Push to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: Sherif-Sakran/energy-price-forecaster
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git remote add hf https://user:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE
+          # Force push to the HF main branch
+          git push -f hf main
