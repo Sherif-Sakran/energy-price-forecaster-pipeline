@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+joblib
+lightgbm
+pandas
+numpy
+huggingface_hub
+pydantic
