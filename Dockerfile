@@ -1,6 +1,9 @@
 # Use an official Python runtime as a parent image
 FROM python:3.11-slim
 
+# --- THE FIX: Install OpenMP library for LightGBM ---
+RUN apt-get update && apt-get install -y libgomp1 && rm -rf /var/lib/apt/lists/*
+    
 # Set the working directory in the container
 WORKDIR /code
 
