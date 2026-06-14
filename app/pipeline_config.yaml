@@ -92,7 +92,7 @@ llm_agent:
     
   # Gemini API settings
   model: "gemini-2.5-flash"
-  temperature: 0.0
+  temperature: 0.5
   
   # I/O Pathing templates
   input_template: "outputs/evaluation/highlights/{paradigm}/worst_performing_days/{day}_diagnostics*.json"
