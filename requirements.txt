@@ -7,3 +7,5 @@ numpy
 huggingface_hub
 pydantic
 scikit-learn
+slowapi
+google-genai
