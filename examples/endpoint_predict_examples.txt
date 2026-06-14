@@ -1,0 +1,21 @@
+request:
+{
+  "timestamp": "2026-05-21 23:00:00+02:00",
+  "Forecasted Load": 45350,
+  "Solar": 0,
+  "Wind Offshore": 274.795,
+  "Wind Onshore": 2764.017455,
+  "temperature_2m": 20.0695,
+  "wind_speed_120m": 17.58481,
+  "is_holiday": 0,
+  "price_lag_24h": 117.36,
+  "price_lag_48h": 82.645,
+  "price_lag_168h": 91.9775
+}
+
+response:
+{
+  "timestamp": "2026-05-21T23:00:00+02:00",
+  "prediction_eur_mwh": 107.15658650800393,
+  "status": "success"
+}
