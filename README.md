@@ -7,7 +7,7 @@ sdk: docker
 pinned: false
 ---
 
-# Energy Price Forecasting API
+# Energy Price Forecaster API
 
 This repository contains the production inference API for the Day-Ahead European power market forecasting model. The system predicts electricity prices (EUR/MWh) using a LightGBM tabular model and includes a secured, LLM-powered anomaly diagnostics engine.
 
